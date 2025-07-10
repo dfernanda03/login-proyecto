@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-@a7mo2-166+y%vd%u_t7-icu)!#t*^tdj3bxjhr$6c_2((i$4#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'backend.wsgi.application'
+WSGI_APPLICATION = 'backend.backend.wsgi.application'
 
 
 # Database
@@ -125,3 +125,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True
+
+import os
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
